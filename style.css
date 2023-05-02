@@ -1,0 +1,232 @@
+@font-face {
+    font-family: "Press Start 2P";
+    src: url(retro.ttf);
+}
+
+body {
+    background: rgb(72,79,98);
+    background: radial-gradient(at bottom right, rgb(55 114 122) 0%, rgb(40 81 96) 25%, rgb(44 39 56) 100%);
+    font-family: "Press Start 2P";
+}
+
+header {
+    color: #e76e55;
+    display: block;
+}
+
+header:hover {
+    color: #f7d51d;
+}
+
+blue {
+    color: #209cee;
+}
+
+yellow {
+    color: #f7d51d;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):hover {
+    text-decoration: none;
+}
+
+logo {
+    font-size: 32px;
+    padding-top: 16px;
+    padding-left: 20px;
+    text-shadow: 4px 4px #0004;
+}
+
+menu a:not([href]):not([tabindex]) {
+    color: #f7d51d;
+    margin-top: 2px;
+}
+
+menu a:not([href]):not([tabindex]):hover {
+    color: #f7d51d;
+    margin-top: 2px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.nes-table-responsive{
+    box-shadow: 4px 4px 16px #0004;
+}
+
+.nes-container.is-dark::after {
+    content: none;
+    background-color: transparent;
+}
+
+.nes-table.is-dark::before {
+    content: none;
+}
+
+.nes-table.is-dark.is-outline {
+    background-color: #2228;
+    border: 8px solid white;
+    border-image-source: url(border.png);
+    border-image-slice: 2 2;
+    border-image-outset: 0;
+    border-image-repeat: repeat;
+    border-collapse: inherit;
+    border-spacing: 0px;
+    image-rendering: pixelated;
+    padding: 2px;
+    width: 880px;
+}
+
+.nes-container-home {
+    display: flex;
+}
+
+#home_container div {
+    flex-grow: 1;
+}
+
+.schedule {
+    display: flex;
+}
+
+.single_schedule {
+    margin: auto;
+    padding-top: 16px;
+    width: 880px;
+}
+
+div.nes-container.is-dark.is-outline {
+    margin: 8px;
+}
+
+menu.nes-container.is-dark.is-outline {
+    margin: 8px 8px 8px auto;
+    width: 600px;
+}
+
+.nes-container.is-dark.is-outline {
+    box-shadow: 4px 4px 16px #0004;
+    background-color: #2228;
+    border: 8px solid white;
+    border-image-source: url(border.png);
+    border-image-slice: 2 2;
+    border-image-outset: 0;
+    border-image-repeat: repeat;
+    border-collapse: inherit;
+    border-spacing: 0px;
+    image-rendering: pixelated;
+    padding: 8px;
+}
+
+.nes-table.is-dark.is-outline td {
+    padding: 16px;
+}
+
+.nes-container.is-dark.with-title>.title {
+    background-color: #212529;
+    margin: -16px 0px;
+}
+
+.nes-table-title {
+    color: white;
+    padding-bottom: 8px;
+}
+
+.nes-container-bottom {
+    display: flex;
+}
+
+.warning-text {
+    color: #f7d51d;
+}
+
+div.nes-container.is-dark {
+    background-color: #212529;
+}
+
+div.nes-container.is-dark::after {
+    background-color: transparent;
+}
+
+menu {
+    display: flex;
+    margin-top: 0px;
+}
+
+menu a {
+    text-align: center;
+    flex-grow: 1;
+    margin-top: 2px;
+}
+
+menu a:before {
+    content: ">";
+    color: transparent;
+}
+
+menu a:hover:before {
+    content: ">";
+    color: #f7d51d;
+}
+
+.icon {
+    height: 64px;
+    width: 64px;
+    display: block;
+    background-size: contain;
+    image-rendering: pixelated;
+}
+
+.twitter:hover {
+    background-image: url(twitter_active.png);
+}
+
+.twitter {
+    background-image: url(twitter.png);
+}
+
+.discord:hover {
+    background-image: url(discord_active.png);
+}
+
+.discord {
+    background-image: url(discord.png);
+}
+
+footer {
+    position: fixed;
+    bottom: 16px;
+    width: 320px;
+    right: 8px;
+	text-align: center;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.is-other {
+    width: 104px;
+    height: 698px;
+}
+
+.is-sponsor {
+    width: 320px;
+}
+
+.is-sponsor img {
+    margin: 0px 20px;
+}
+
+.is-map {
+    width: 632px;
+}
+
+.is-map iframe{
+    filter: invert(95%) hue-rotate(180deg);
+}

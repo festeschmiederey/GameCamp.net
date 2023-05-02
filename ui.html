@@ -1,0 +1,149 @@
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js" integrity="sha512-Xo0Jh8MsOn72LGV8kU5LsclG7SUzJsWGhXbWcYs2MAmChkQzwiW/yTQwdJ8w6UA9C6EVG18GHb/TrYpYCjyAQw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css">
+<script>
+	$(document)
+		.ready(function() {
+			$('.ui.dropdown').dropdown();
+
+			$('.ui.menu .ui.dropdown').dropdown({
+				on: 'hover'
+			});
+			$('.ui.menu a.item')
+				.on('click', function() {
+					$(this)
+						.addClass('active')
+						.siblings()
+						.removeClass('active');
+		});
+		
+		$('.ui.accordion')
+		  .accordion();
+	});
+</script>
+</head>
+	<body style="background-color:#232B32;">
+	
+	<div class="ui right sidebar vertical inverted menu visible">
+		<div class="ui inverted secondary pointing menu">
+			<a class="active item">Maps</a>
+			<a class="item">Tiles</a>
+			<a class="item">Components</a>
+		</div>
+
+		<div class="ui inverted segment">
+			<div class="ui list">
+			  <div class="item">
+				<div class="ui left labeled fluid button" tabindex="0">
+				  <div class="ui basic fluid label">
+					Snake
+				  </div>
+				  <div class="ui attached blue icon button">
+					<i class="upload icon"></i>
+				  </div>
+				  <div class="ui right attached red icon button">
+					<i class="minus icon"></i>
+				  </div>
+				</div>
+				  </div>
+				  <div class="item">
+				<div class="ui left labeled fluid button" tabindex="0">
+				  <div class="ui basic fluid label">
+					Snake123
+				  </div>
+				  <div class="ui blue icon button">
+					<i class="pencil icon"></i>
+				  </div>
+				</div>
+				  </div>
+				  <div class="item">
+				<div class="ui left labeled fluid button" tabindex="0">
+				  <div class="ui basic fluid label">
+					Snake
+				  </div>
+				  <div class="ui blue icon button">
+					<i class="pencil icon"></i>
+				  </div>
+				</div>
+				  </div>
+				  <div class="item">
+				<div class="ui left labeled fluid button" tabindex="0">
+				  <div class="ui basic fluid label">
+					Snake
+				  </div>
+				  <div class="ui red icon button">
+					<i class="minus icon"></i>
+				  </div>
+				</div>
+				  </div>
+					<div class="item">
+				<div class="ui labeled fluid button" tabindex="0">
+					<div class="ui floating search dropdown fluid button">
+						<input class="search" autocomplete="off" tabindex="0"><span class="text">Choose...</span></input>
+						<div class="menu transition hidden" tabindex="-1">
+							<div class="item active selected">Hero</div>
+							<div class="item">Movement</div>
+							<div class="item">Pushable</div>
+						</div>
+					</div>
+				  <div class="ui teal icon attached button">
+					<i class="plus icon"></i>
+				  </div>
+				</div>
+			  </div>
+		  </div>
+		</div>
+		
+		<div class="ui inverted segment">
+		  <div class="ui inverted accordion">
+			<div class="title active">
+			  <i class="dropdown icon"></i>
+			  Movement
+			</div>
+			<div class="content active">
+			  <p class="transition visible" style="display: block !important;">
+					<div class="ui list">
+						<div class="item">
+							<div class="ui labeled fluid input">
+								<div class="ui blue label">x</div>
+								<input type="text" placeholder="0">
+							</div>
+						</div>
+						<div class="item">
+							<div class="ui labeled fluid input">
+								<div class="ui blue label">y</div>
+								<input type="text" placeholder="0">
+							</div>
+						</div>
+					</div>
+			  </p>
+			</div>
+			<div class="title">
+			  <i class="dropdown icon"></i>
+			  Hero
+			</div>
+			<div class="content">
+			  <p class="transition hidden">There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
+			</div>
+			<div class="title">
+			  <i class="dropdown icon"></i>
+			  Pushable
+			</div>
+			<div class="content">
+			  <p class="transition hidden">Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.</p>
+			  <p class="transition hidden">A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.</p>
+			</div>
+		  </div>
+		</div>
+	</div>
+
+		<div class="ui grid">
+			<div class="ten wide column"></div>
+			<div class="six wide column">
+			
+
+		</div>
+	</body>
+</html>

@@ -1,0 +1,201 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="nes.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="jquery-3.6.3.min.js"></script>
+        <script src="retro.core.js"></script>
+        <script src="retro.gfx.js"></script>
+        <script src="retro.input.js"></script>
+        <script src="retro.component.js"></script>
+        <script src="retro.system.js"></script>
+        <script src="retro.blueprint.js"></script>
+        <script src="retro.entity.js"></script>
+        <script src="retro.map.js"></script>
+        <script src="retro.packman.js"></script>
+        <script src='astar.js'></script>
+      </head>
+      <script>
+        $(document).ready(function(){
+            const sites = ["home", "schedule", "faq"];
+
+            sites.forEach(function(site) {
+                $("#" + site).click(function(item){
+                    sites.forEach(function(site2) {
+                        $("#" + site2 + "_container").css("display", site == site2 ? "block" : "none");
+                    });
+                });
+            });
+
+            $("#" + sites[0] + "_container").css("display", "block");
+
+            const tabs = ["tab1", "tab2", "tab3", "tab4", "tab5"];
+
+            tabs.forEach(function(tab) {
+                $("#" + tab).click(function(item){
+                    tabs.forEach(function(tab2) {
+                        $("#" + tab2 + "_content").css("display", tab == tab2 ? "block" : "none");
+                    });
+                });
+            });
+
+            $("#" + tabs[0] + "_content").css("display", "block");
+
+            InitGame();
+        });
+      </script>
+    <body>
+        <div style="display: flex;">
+            <logo class="nes-text is-warning">MINI GAMECAMP MUNICH</logo>
+            <menu class="nes-container is-dark is-outline with-title">
+                <a id="home" class="nes-text is-warning">Home</a>
+                <a id="schedule" class="nes-text is-warning">Zeitplan</a>
+                <a id="faq" class="nes-text is-warning">FAQ</a>
+            </menu>
+        </div>
+
+        <div id="home_container" style="display: none;">
+            <div class="nes-container-home">
+                <div class="nes-container-left">
+                    <div>
+                        <canvas id="canvas" style="width: 768px; height: 384px; image-rendering: pixelated;"></canvas>
+                    </div>
+                    <div class="nes-container-bottom">
+                        <div class="nes-container-center">
+                            <div class="nes-container is-dark is-outline is-other">
+                                <a class="icon twitter" href="https://twitter.com/gamecampmunich" target="_blank"></a>
+                                <a class="icon discord" href="https://discord.gg/nweCtPC6" target="_blank"></a>
+                            </div>
+                        </div>
+                        <div class="nes-container-left">
+                            <div class="nes-container is-dark is-outline is-map">
+                                <yellow>Anfahrt</yellow>
+                                <br><br>
+                                <span>MUCCA Streaming (Foyer, Kino, Kost&uuml;m)</span>
+								<br>
+                                <span>Schwere Reiter Stra&szlig;e 2, 80797 M&uuml;nchen</span>                        
+                                <br>
+                                <br>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.385170970359!2d11.547648115649821!3d48.16065737922526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e7673bd740689%3A0xb1f66017209607a8!2sSchwere-Reiter-Str.%203%2C%2080637%20M%C3%BCnchen%2C%20Germany!5e0!3m2!1sen!2sus!4v1680238536791!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <br>
+                                <br>
+                                <span style="background-color: #823282; padding: 8px 8px 6px 8px;">12</span>
+				<span style="background-color: #e30613; padding: 8px 8px 6px 8px;">16</span>
+				<span style="background-color: #00a03c; padding: 8px 8px 6px 8px;">18</span>
+				<span style="background-color: #dc281e; padding: 8px 8px 6px 8px;">19</span>
+				<span style="background-color: #00aadc; padding: 8px 8px 6px 8px;">20</span>
+				<span>Leonrodplatz</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nes-container-right">
+                    <div class="nes-container is-dark is-outline">
+                        <header id="tab1">Was ist das gamecamp?</header>
+                        <div id="tab1_content" style="display: none;">
+                            <br>
+                            <p>Das GameCamp Munich ist ein Barcamp, also eine sogenannte Unkonferenz. Alle Teilnehmenden k&ouml;nnen ihre eigenen Sessions halten und damit Inhalt und Ablauf des Barcamps selbst definieren. Inhaltlich dreht sich beim GameCamp Munich alles um die Themen Games, Gameskultur und Gamesentwicklung.</p>
+                            <p>Dieses Jahr findet das #gcmuc am <blue>01.05.2023</blue> um <blue>11Uhr</blue> statt, und zwar im <blue>Mucca Streaming (Foyer, Kino und Kost&uuml;m)</blue> Schwere Reiter Stra&szlig;e 2, 80797 M&uuml;nchen.</p>
+                        </div>
+                    </div>
+                    <div class="nes-container is-dark is-outline">
+                        <header id="tab2">Warum sollte ich vorbeikommen?</header>
+                        <div id="tab2_content" style="display: none;">
+                            <br>
+                            <p>Das GameCamp ist f&uuml;r Menschen gedacht, die gemeinsam Games feiern wollen. Ob das dein Minecraft Server, dein Games-Prototyp oder deine neue Leidenschaft f&uuml;r Cosplay ist: Auf dem GameCamp hat jede*r die M&ouml;glichkeit alles rund um Games zu sharen.</p>
+                            <p>Wir machen das in <blue>Sessions</blue>, also 30 Minuten Bl&ouml;cken die jede*r dann mit Inhalt füllen kann, wie es passt. Wenn du ein Thema hast, worüber du viel weißt oder was du unbedingt teilen willst, bereite am besten etwas vor. Eine Präsentation, ein Video oder vielleicht sogar ein Gameprojekt. Für eine Diskussionsrunde kannst du auch ein paar Fragen vorbereiten und interessante Artikel oder Videos.</p>
+                            <blue>Wir freuen uns auf ein Event mit vielen verschiedenen Themen und Camper*innen!</blue>
+                        </div>
+                    </div>
+                    <div class="nes-container is-dark is-outline">
+                        <header id="tab3">Auch DU kannst Speaker*in sein!</header>
+                        <div id="tab3_content" style="display: none;">
+                            <br>
+                            <p>Das GameCamp Munich ist der perfekte Ort, um von deinem nerdigen Hobby, der besten Spieleidee der Welt oder einem dreik&ouml;pfigen Affen zu erzählen. Eine gute Faustregel für einen Vortrag lautet: Welche Geschichte kannst nur du erzählen, welche Erfahrung oder Erkenntnis möchtest du mit anderen teilen?</p>
+                        </div>
+                    </div>
+                    <div class="nes-container is-dark is-outline">
+                        <header id="tab4">Wie funktioniert das GameCamp?</header>
+                        <div id="tab4_content" style="display: none;">
+                            <br>
+                            <p>Ihr k&ouml;nnt euch in K&uuml;rze einen Platz reservieren. Du kannst auch spontan vorbeikommen, aber dann haben wir vielleicht nicht mehr genug Platz. Auf Social posten wir im Vorfeld und w&auml;hrenddessen alles unter dem Hashtag <blue>#gcmuc</blue></p>
+                        </div>
+                    </div>
+                    <div class="nes-container is-dark is-outline">
+                        <header id="tab5">Was passiert vor Ort?</header>
+                        <div id="tab5_content" style="display: none;">
+                            <br>
+                            <p>Nach eine kurzen Willkommens- und Kennenlernrunde, kannst du deine Session pitchen. Das heißt, du bekommst die Gelegenheit dein Thema allen anderen vorzustellen. Wir suchen dir dann einen Platz im Sessionplan, wo du dann 30 Minuten Zeit hast, deine Session zu halten. Ob das ein kleiner Workshop, eine Präsentation oder eine Diskussionsrunde ist: Deiner Fantasie sind bis auf die 30 Minuten Zeit keine Grenzen gesetzt. Und es sollte halt was mit Games zu tun haben. Jeder Raum verfügt über Präsentationsmöglichkeiten und Sitzgelegenheiten für die anderen Camper*innen.</p>
+                            <p>Das GameCamp Munich wird derzeit mit ehrenamtlicher Hilfe, dem Support von Games/Bavaria (gefördert durch das Bayerische Staatsministerium für Digitales) und der Unterstützung der Teilnehmenden vor Ort organisiert. Die Stimmung ist stets ausgelassen und wir möchten, dass sich alle willkommen und sicher fühlen. Hierzu gibt es einen Verhaltenskodex (Code of Conduct) an den sich unsere Teilnehmenden halten müssen. Wir freuen uns auf ein kreatives, entspanntes und interessantes #gcmuc22hoch2 mit vielen neuen Gesichtern!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nes-container-right2">
+                    <div class="nes-container is-dark is-outline is-sponsor">
+                        <yellow>Sponsoren</yellow>
+                        <br>
+						<br>
+                        <img src="sponsor_gamesfestival.png" width="256">
+						<br>
+						<br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="schedule_container" style="display: none;">
+            <div class="schedule">
+                <div class="single_schedule">
+                    <div class="nes-table-title">Montag 01.05.2023</div>
+                    <div class="nes-table-responsive">
+                        <table class="nes-table is-outline is-dark ">
+                            <tbody>
+                            <tr>
+                                <td class="warning-text center-text">Zeit</th>
+								<td class="warning-text center-text">Ort</th>
+                                <td class="warning-text center-text">Veranstaltung</th>
+                            </tr>
+                            <tr>
+                                <td>11:00 - 12:00</td>
+								<td>Mucca Streaming</td>
+                                <td>Willkommen & Abstimmung!</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="faq_container" style="display: none;">
+            <div class="nes-container is-dark is-outline">
+                <header>Wann und wo wird das GameCamp 2023 stattfinden?</header>
+                <p>Das GameCamp Munich findet am 1. Mai 2023 in München statt! Mucca Saal und Mucca B&uuml;chersalon, Schwere Reiter Stra&szlig;e 3, 80797 M&uuml;nchen</p>
+            </div>
+            <div class="nes-container is-dark is-outline">
+                <header>Was kostet mich das GameCamp Munich?</header>
+                <p>Nichts. Ausser deiner Anwesenheit, dem Versprechen zu kommen wenn du dich anmeldest und wir würden uns natürlich über ein paar freiwillige Helfer freuen bzw. eine kleine Spende um die Materialien zu beschaffen, die wir nicht mit Sponsoren abdecken können.</p>
+            </div>
+            <div class="nes-container is-dark is-outline">
+                <header>Was muss ich mitbringen?</header>
+                <p>Wir freuen uns auf die Vielfalt der Gameskultur: Dein Hobbyprojekt, Prototyp, Forschungsarbeit, Fan-Projekt oder Dissertationen sind unsere Leidenschaft. Du machst etwas mit Games? Du willst darüber reden? Perfekt.</p>
+                <p>Und einfach nur zuzuhören, um sich in und nach den Talks auszutauschen, ist auch vollkommen legitim. Es gibt keinen besseren Ort um abzunerden als das GameCamp Munich. Versprochen.</p>
+            </div>
+            <div class="nes-container is-dark is-outline">
+                <header>Gibt es Goodies oder Verpflegung?</header>
+                <p>Mittagessen ist nicht eingeplant</p>
+            </div>
+            <div class="nes-container is-dark is-outline">
+                <header>Wie kann ich meinen Beitrag vorstellen?</header>
+                <p>Zu Beginn der Sessionplanung hast du sehr kurz Zeit vorzustellen, worum es in deiner Session gehen wird. Konzetrier dich dabei auf das Wichtigste und beantworte die imaginäre Frage “Was habe ich verpasst, wenn ich nicht an deiner Session teilnehme?”</p>
+            </div>
+        </div>
+
+        <footer class="icon-list">
+            <a class="nes-text is-warning" href="/privacy.html" target="_blank">Datenschutz</a>
+			<br>
+			<br>
+            <a class="nes-text is-warning" href="/imprint.html" target="_blank">Impressum</a>
+        </footer>
+    </body>
+</html>
