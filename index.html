@@ -1,9 +1,13 @@
-<html>
+<!DOCTYPE html>
+<html lang="de">
     <head>
+		<title>GameCamp Munich 2023 - GameCamp Munich</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <link rel="stylesheet" href="css/nes.min.css">
+		<meta name="description" content="Im Oktober findet in der SAE Akademie München das GameCamp statt. Zwei Tage lang geht es nur um Games und Community." />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
-        <script src="js/jquery-3.6.3.min.js"></script>
+        <script src="js/jquery-3.6.4.slim.min.js"></script>
+		<script src="js/async-google-maps.min.js"></script>
         <script src="js/retro.core.js"></script>
         <script src="js/retro.gfx.js"></script>
         <script src="js/retro.input.js"></script>
@@ -42,15 +46,17 @@
             $("#" + tabs[0] + "_content").css("display", "block");
 
             InitGame();
+			
+			$('.g-maps').asyncGoogleMaps();
         });
       </script>
     <body>
         <div style="display: flex;">
-            <logo class="nes-text is-warning">MINI GAMECAMP MUNICH</logo>
+            <logo class="nes-text is-warning">GAMECAMP MUNICH</logo>
             <menu class="nes-container is-dark is-outline with-title">
-                <a id="home" class="nes-text is-warning">Home</a>
-                <a id="schedule" class="nes-text is-warning">Zeitplan</a>
-                <a id="faq" class="nes-text is-warning">FAQ</a>
+                <div id="home" class="nes-text is-warning link">Home</div>
+                <div id="schedule" class="nes-text is-warning link">Zeitplan</div>
+                <div id="faq" class="nes-text is-warning link">FAQ</div>
             </menu>
         </div>
 
@@ -76,15 +82,15 @@
                                 <span>Schwere Reiter Stra&szlig;e 2, 80797 M&uuml;nchen</span>                        
                                 <br>
                                 <br>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.385170970359!2d11.547648115649821!3d48.16065737922526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e7673bd740689%3A0xb1f66017209607a8!2sSchwere-Reiter-Str.%203%2C%2080637%20M%C3%BCnchen%2C%20Germany!5e0!3m2!1sen!2sus!4v1680238536791!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe class="g-maps" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.385170970359!2d11.547648115649821!3d48.16065737922526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e7673bd740689%3A0xb1f66017209607a8!2sSchwere-Reiter-Str.%203%2C%2080637%20M%C3%BCnchen%2C%20Germany!5e0!3m2!1sen!2sus!4v1680238536791!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 <br>
                                 <br>
                                 <span style="background-color: #823282; padding: 8px 8px 6px 8px;">12</span>
-				<span style="background-color: #e30613; padding: 8px 8px 6px 8px;">16</span>
-				<span style="background-color: #00a03c; padding: 8px 8px 6px 8px;">18</span>
-				<span style="background-color: #dc281e; padding: 8px 8px 6px 8px;">19</span>
-				<span style="background-color: #00aadc; padding: 8px 8px 6px 8px;">20</span>
-				<span>Leonrodplatz</span>
+								<span style="background-color: #e30613; padding: 8px 8px 6px 8px;">16</span>
+								<span style="background-color: #00a03c; padding: 8px 8px 6px 8px;">18</span>
+								<span style="background-color: #dc281e; padding: 8px 8px 6px 8px;">19</span>
+								<span style="background-color: #00aadc; padding: 8px 8px 6px 8px;">20</span>
+								<span>Leonrodplatz</span>
                             </div>
                         </div>
                     </div>
@@ -135,7 +141,7 @@
                         <yellow>Sponsoren</yellow>
                         <br>
 						<br>
-                        <img src="gfx/sponsor_gamesfestival.png" width="256">
+                        <img src="gfx/sponsor_gamesfestival.png" alt="sponsor" width="256" height="82">
 						<br>
 						<br>
                     </div>
@@ -192,10 +198,10 @@
         </div>
 
         <footer class="icon-list">
-            <a class="nes-text is-warning" href="/privacy.html" target="_blank">Datenschutz</a>
+            <a class="nes-text is-warning link" href="/privacy.html" target="_blank">Datenschutz</a>
 			<br>
 			<br>
-            <a class="nes-text is-warning" href="/imprint.html" target="_blank">Impressum</a>
+            <a class="nes-text is-warning link" href="/imprint.html" target="_blank">Impressum</a>
         </footer>
     </body>
 </html>

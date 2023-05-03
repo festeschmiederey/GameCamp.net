@@ -1,4 +1,3 @@
-
 let COMPONENT_LIST = {};
 
 function AddComponent(name, data)
