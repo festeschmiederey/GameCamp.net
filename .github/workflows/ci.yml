@@ -34,12 +34,12 @@ jobs:
       
     - name: deploy
       if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/heads/productive') }}
-      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      uses: SamKirkland/FTP-Deploy-Action@4.3.4
       with:
         server: ssh.strato.de
         port: 22
         username: 512147848.swh.strato-hosting.eu
         password: ${{ secrets.FTP_PASSWORD }}
-        protocol: ftps
+        protocol: sftp
         server-dir: ./gcmuc/
   
