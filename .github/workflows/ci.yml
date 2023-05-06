@@ -34,12 +34,11 @@ jobs:
       
     - name: deploy
       if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/heads/productive') }}
-      uses: wangyucode/sftp-upload-action@v2.0.2
+      uses: SamKirkland/web-deploy@v1
       with:
-        host: ssh.strato.de
-        username: 512147848.swh.strato-hosting.eu
-        password: ${{ secrets.FTP_PASSWORD }}
-        protocol: sftp
+        target-server: ssh.strato.de
+        remote-user: 512147848.swh.strato-hosting.eu
+        private-ssh-key: ${{ secrets.FTP_PASSWORD }}
         localDir: './'
-        remoteDir: ./gcmuc/
-        exclude: '.git/*'
+        destination-path: ./gcmuc/
+        rsync-options: '--exclude=.git* --exclude=.git/'
