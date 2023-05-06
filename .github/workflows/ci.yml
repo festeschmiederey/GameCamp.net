@@ -1,0 +1,45 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ productive ]
+  pull_request:
+    branches: [ productive ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        lfs: false #use cache
+        
+    - name: Cache LFS
+      uses: actions/cache@v1
+      with:
+        path: .git/lfs/objects
+        # In a push event this is the name of the branch (refs/heads/branch-name).
+        # In a pull request this names the virtual merge (refs/pulls/123/merge).
+        key: lfs-${{ github.ref }}
+        # On a cache miss take the newest cache entry this branch has access to.
+        restore-keys: lfs-
+
+    - name: Pull LFS
+      run: git lfs pull          
+      
+    - name: deploy
+      if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/heads/productive') }}
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ssh.strato.de
+        username: 512147848.swh.strato-hosting.eu
+        password: ${{ secrets.FTP_PASSWORD }}
+        protocol: sftp
+        local-dir: ./
+        dangerous-clean-slate: false
+  
