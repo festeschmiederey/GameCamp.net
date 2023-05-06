@@ -42,4 +42,4 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         localDir: './'
         remoteDir: ./gcmuc/
-        exclude:  '.git*,.git/*'
+        exclude:  '.git*,.git/**/*,.github/**/*'
