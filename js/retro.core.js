@@ -13,18 +13,25 @@ function InitSim()
 		RunSystem("Draw", GFX_CTX);
 		
 		ClearKeys();
+		ClearMouse();
 
 		if(SIM_STEP == -1)
 		{
 			for (let i = 0; i < keycodes.length; i++)
 			{
-				if(KEYDOWN[keynames[i]] == true) {
+				if(KEYDOWN[keynames[i]] == true)
+				{
 					RunSystem("Input", keynames[i]);
 					break;
 				}
 			}
-		}
 
+			if(MOUSEDOWN == true)
+			{
+				RunSystem("Mouse", mpos);
+			}
+		}
+	
 		if(SIM_STEP != -1)
 		{
 			if (SIM_STEP == 0)
