@@ -24,3 +24,7 @@ function Cls() {
 function DrawTile(id, x, y) {
 	GFX_CTX.drawImage(GFX_TILES, id % 16 * 8, Math.floor(id / 16) * 8, 8, 8, x, y, 8, 8);
 }
+
+function DrawImage(id, x, y,w,h) {
+	GFX_CTX.drawImage(GFX_TILES, id % 16 * w, Math.floor(id / 16) * h, w, h, x - ((w - 8) * 0.5), y - ((h - 8) * 0.5), w, h);
+}

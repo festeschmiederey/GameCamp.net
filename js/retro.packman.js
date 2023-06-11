@@ -1,26 +1,27 @@
 function InitGame()
 {
 	InitGraphics(256, 128, "gfx/gc_tiles.png");
+	InitInput();
 	
 	let palette = " ║ ═ ╚ ╔ ╗ ╝ ╣ ╩ ╠ ╦ ╬ ";
 
 	let map = [
 		'.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.',
 		'╔','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','╗',
-		'║','@','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','║',
-		'║','o','╔','═','═','═','o','╔','═','╗','o','║','o','o','o','║','o','╔','═','═','o','o','o','o','o','o','o','o','o','o','o','║',
-		'║','o','║','o','o','o','o','║','o','║','o','╠','═','╦','═','╣','o','║','o','o','o','o','o','o','o','o','o','o','o','o','o','║',
-		'║','o','║','o','═','╗','o','╠','═','╣','o','║','o','║','H','║','o','╠','═','o','o','o','o','o','M','o','o','o','o','o','o','║',
-		'║','o','║','o','o','║','o','║','o','║','o','║','o','o','o','║','o','║','o','o','o','o','o','o','o','o','o','o','o','o','o','║',
-		'║','o','╚','═','═','╝','o','║','o','║','o','║','o','o','o','║','o','╚','═','═','o','o','o','o','o','o','o','o','o','o','o','║',
-		'║','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','2','0','2','3','o','║',
-		'║','o','o','o','o','o','o','╔','═','═','o','╔','═','╗','o','║','o','o','o','║','o','╔','═','╗','o','o','o','o','o','o','o','║',
-		'║','o','o','o','o','o','o','║','o','o','o','║','o','║','o','╠','═','╦','═','╣','o','║','o','║','o','o','o','o','o','o','o','║',
-		'║','o','o','o','o','o','o','║','o','o','o','╠','═','╣','o','║','o','║','o','║','o','╠','═','╝','o','o','o','o','o','o','o','║',
-		'║','o','o','R','o','o','o','║','o','o','o','║','S','║','o','║','o','o','o','║','o','║','o','o','o','B','o','o','o','o','o','║',
-		'║','o','o','o','o','o','o','╚','═','═','o','║','o','║','o','║','o','o','o','║','o','║','o','o','o','o','o','o','o','o','o','║',
-		'║','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','║',
-		'╚','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','╝'
+		'║','@','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','║',
+		'║','O','╔','═','═','═','O','╔','═','╗','O','║','O','O','O','║','O','╔','═','═','O','O','O','O','O','2','8','-','2','9','O','║',
+		'║','O','║','O','O','O','O','║','O','║','O','╠','═','╦','═','╣','O','║','O','O','O','O','O','O','O','O','O','O','O','O','O','║',
+		'║','O','║','O','═','╗','O','╠','═','╣','O','║','O','║','O','║','O','╠','═','O','O','O','O','o','k','t','o','b','e','r','O','║',
+		'║','O','║','O','O','║','O','║','O','║','O','║','O','O','O','║','O','║','O','O','O','O','O','O','O','O','O','O','O','O','O','║',
+		'║','O','╚','═','═','╝','O','║','O','║','O','║','O','O','O','║','O','╚','═','═','O','O','O','O','X','O','2','0','2','3','O','║',
+		'║','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','║',
+		'║','O','O','O','O','O','O','╔','═','═','O','╔','═','╗','O','║','O','O','O','║','O','╔','═','╗','O','O','O','O','O','O','O','║',
+		'║','O','O','O','S','O','O','║','O','O','O','║','O','║','O','╠','═','╦','═','╣','O','║','O','║','O','O','O','O','O','O','O','║',
+		'║','O','O','O','O','O','O','║','O','O','O','╠','═','╣','O','║','O','║','O','║','O','╠','═','╝','O','O','O','O','B','O','O','║',
+		'║','O','R','O','O','O','O','║','O','O','O','║','O','║','O','║','O','O','O','║','O','║','O','O','O','O','O','O','O','O','O','║',
+		'║','O','O','O','O','O','O','╚','═','═','O','║','O','║','O','║','O','O','O','║','O','║','O','O','O','O','O','O','O','O','O','║',
+		'║','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','O','╔','═','═','═','╝',
+		'╚','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','═','╝','<','>','^','V'
 	];
 
 	InitMap(32, 16, ["Ground", "Tile", "Object", "Item", "Unit"]);
@@ -34,6 +35,7 @@ function InitGame()
 	AddComponent("Health", {value: 0, max: 0});
 	AddComponent("Attack", 0);
 	AddComponent("Defend", 0);
+	AddComponent("Level", 1);
 	AddComponent("Speed", 1);
 	AddComponent("Score", 0);
 	AddComponent("Control", "none");
@@ -46,6 +48,7 @@ function InitGame()
 	AddComponent("Item", {component: "unknown", param: null, value: 0});
 	AddComponent("Drop", " ");
 	AddComponent("HUD");
+	AddComponent("Button", "");
 
 	// Create System
 	AddSystem("Create", OnSimPositionSystem, ["Map", "Position"]);
@@ -64,6 +67,9 @@ function InitGame()
 
 	// Input Systems
 	AddSystem("Input", OnInputSystem, ["Hero", "Movement"]);
+
+	// Mouse Systems
+	AddSystem("Mouse", OnButtonSystem, ["Map", "Button"]);
 
 	// Sim Start Systems
 	//AddSystem("SimStart", OnObjectStartSystem, ["Object", "Map", "Movement"]);
@@ -87,9 +93,9 @@ function InitGame()
 	AddSystem("Collision", OnObjectCollisionSystem, ["Unit"], ["Object"]);
 
 	// Units
-	AddBlueprint("@", ["Hero", "Unit", "Position", "Action", "Speed", "Map", "Movement", "Score"], {Sprite: 4, Control: "input", Health: {value: 3, max: 3}, Attack: 1, Defend: 0});
-	AddBlueprint("S", ["AI", "Unit", "Position", "Action", "Speed", "Map", "Movement", "HUD"], {Sprite: 20, Control: "ai", Health: {value: 3, max: 3}, Attack: 1, Drop: 'H'});
-	AddBlueprint("B", ["AI", "Unit", "Position", "Action", "Speed", "Map", "Movement", "HUD"], {Sprite: 13, Control: "ai", Health: {value: 4, max: 4}, Attack: 2, Drop: 'H'});
+	AddBlueprint("@", ["Hero", "Unit", "Position", "Action", "Speed", "Map", "Movement", "Score"], {Sprite: 4, Control: "input", Level: 1, Health: {value: 2, max: 3}, Attack: 1, Defend: 0});
+	AddBlueprint("S", ["AI", "Unit", "Position", "Action", "Speed", "Map", "Movement", "HUD"], {Sprite: 20, Control: "ai", Health: {value: 3, max: 3}, Attack: 1, Drop: 'M'});
+	AddBlueprint("B", ["AI", "Unit", "Position", "Action", "Speed", "Map", "Movement", "HUD"], {Sprite: 13, Control: "ai", Health: {value: 4, max: 4}, Attack: 1, Drop: 'P'});
 	AddBlueprint("R", ["AI", "Unit", "Position", "Action", "Speed", "Map", "Movement", "HUD"], {Sprite: 22, Control: "ai", Health: {value: 2, max: 2}, Attack: 1, Drop: 'H'});
 
 	// Ground
@@ -125,20 +131,53 @@ function InitGame()
 	AddBlueprint("8", ["Tile", "Map"], {Sprite: 184});
 	AddBlueprint("9", ["Tile", "Map"], {Sprite: 185});
 
-	AddBlueprint("m", ["Tile", "Map"], {Sprite: 192});
-	AddBlueprint("a", ["Tile", "Map"], {Sprite: 193});
-	AddBlueprint("y", ["Tile", "Map"], {Sprite: 194});
+	AddBlueprint("a", ["Tile", "Map"], {Sprite: 192});
+	AddBlueprint("b", ["Tile", "Map"], {Sprite: 193});
+	AddBlueprint("c", ["Tile", "Map"], {Sprite: 194});
+	AddBlueprint("d", ["Tile", "Map"], {Sprite: 195});
+	AddBlueprint("e", ["Tile", "Map"], {Sprite: 196});
+	AddBlueprint("f", ["Tile", "Map"], {Sprite: 197});
+	AddBlueprint("g", ["Tile", "Map"], {Sprite: 198});
+	AddBlueprint("h", ["Tile", "Map"], {Sprite: 199});
+	AddBlueprint("i", ["Tile", "Map"], {Sprite: 200});
+	AddBlueprint("j", ["Tile", "Map"], {Sprite: 201});
+	AddBlueprint("k", ["Tile", "Map"], {Sprite: 202});
+	AddBlueprint("l", ["Tile", "Map"], {Sprite: 203});
+	AddBlueprint("m", ["Tile", "Map"], {Sprite: 204});
+	AddBlueprint("n", ["Tile", "Map"], {Sprite: 205});
+	AddBlueprint("o", ["Tile", "Map"], {Sprite: 206});
+	AddBlueprint("p", ["Tile", "Map"], {Sprite: 207});
+	AddBlueprint("q", ["Tile", "Map"], {Sprite: 208});
+	AddBlueprint("r", ["Tile", "Map"], {Sprite: 209});
+	AddBlueprint("s", ["Tile", "Map"], {Sprite: 210});
+	AddBlueprint("t", ["Tile", "Map"], {Sprite: 211});
+	AddBlueprint("u", ["Tile", "Map"], {Sprite: 212});
+	AddBlueprint("v", ["Tile", "Map"], {Sprite: 213});
+	AddBlueprint("w", ["Tile", "Map"], {Sprite: 214});
+	AddBlueprint("x", ["Tile", "Map"], {Sprite: 215});
+	AddBlueprint("y", ["Tile", "Map"], {Sprite: 216});
+	AddBlueprint("z", ["Tile", "Map"], {Sprite: 217});
+
+	AddBlueprint("-", ["Tile", "Map"], {Sprite: 218});
+	
+	// Buttons
+	AddBlueprint("<", ["Tile", "Map"], {Sprite: 219, Button: "left"});
+	AddBlueprint(">", ["Tile", "Map"], {Sprite: 220, Button: "right"});
+	AddBlueprint("^", ["Tile", "Map"], {Sprite: 221, Button: "up"});
+	AddBlueprint("V", ["Tile", "Map"], {Sprite: 222, Button: "down"});
 
 	// Objects
 	AddBlueprint("P", ["Object", "Map", "Pushable", "Movement", "Position", "Action", "Speed"], {Sprite: 122});
 
 	// Items
 	AddBlueprint("H", ["Map"], {Sprite: 171, Item: {component: "Health", param: "value", value: 2}});
-	AddBlueprint("M", ["Map"], {Sprite: 170, Item: {component: "Health", param: "max", value: 1}});
+	AddBlueprint("M", ["Map"], {Sprite: 174, Item: {component: "Health", param: "max", value: 1}});
+	AddBlueprint("X", ["Map"], {Sprite: 170, Item: {component: "Health", param: "value", value: 4}});
 	AddBlueprint("D", ["Map"], {Sprite: 70, Item: {component: "Attack", value: 1}});
 	AddBlueprint("C", ["Map"], {Sprite: 42, Item: {component: "Defend", value: 1}});
+	AddBlueprint("P", ["Map"], {Sprite: 175, Item: {component: "Level", value: 1}});
 
-	AddBlueprint("o", ["Map"], {Sprite: 17, Item: {component: "Score", value: 1}});
+	AddBlueprint("O", ["Map"], {Sprite: 17, Item: {component: "Score", value: 1}});
 
 	// Editor
 	AddBlueprint("Editor", ["Editor"]);
@@ -354,7 +393,14 @@ function OnDrawHUDSystem(entity)
 
 function OnDrawSpriteSystem(entity)
 {
-	DrawTile(entity.Sprite, entity.Position.x, entity.Position.y);
+	if (entity.Hero != null && entity.Level >= 2)
+	{
+		DrawImage(entity.Sprite + 108, entity.Position.x, entity.Position.y, 16, 16);
+	}
+	else
+	{
+		DrawTile(entity.Sprite, entity.Position.x, entity.Position.y);
+	}
 }
 
 function DrawHeroUISystem(entity)
@@ -498,4 +544,34 @@ function MoveEntity(entity, dx, dy)
 	entity.Movement.y = dy;
 	entity.Speed = 1;
 	entity.Action = "move";
+}
+
+function OnButtonSystem(entity, pos)
+{
+	if (pos.x == entity.Map.x && pos.y == entity.Map.y)
+	{
+		ButtonEntity(entity);
+	}
+}
+
+function ButtonEntity(entity)
+{
+	if (entity.Button == "up")
+	{
+		MoveEntity(hero, 0, -1);
+	}
+	else if (entity.Button == "down")
+	{
+		MoveEntity(hero, 0, 1);
+	}
+	else if (entity.Button == "left")
+	{
+		MoveEntity(hero, -1, 0);
+	}
+	else if (entity.Button == "right")
+	{
+		MoveEntity(hero, 1, 0);
+	}
+
+	StartSim();
 }
