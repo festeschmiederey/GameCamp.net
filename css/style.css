@@ -56,11 +56,106 @@ a:not([href]):not([tabindex]):hover {
     text-decoration: none;
 }
 
-logo {
-    font-size: 32px;
-    padding-top: 16px;
-    padding-left: 20px;
-    text-shadow: 4px 4px #0004;
+/* For desktop: */
+@media only screen and (min-width: 1024px) {
+	#header-container {
+		display: flex;
+	}
+	
+	#map-mobile {
+		display: none;
+	}
+	
+	#logo-mobile{
+		display: none;
+	}
+	
+	.nes-container-home {
+		display: flex;
+	}
+	
+	footer {
+		position: fixed;
+		bottom: 16px;
+		width: 320px;
+		right: 8px;
+		text-align: center;
+	}
+	
+	menu.nes-container.is-dark.is-outline {
+		margin: 8px 8px 8px auto;
+		width: 600px;
+	}
+	
+	menu.nes-container.is-dark.is-outline {
+		margin: 8px 8px 8px auto;
+		width: 600px;
+	}
+	
+	logo {
+		font-size: 32px;
+		padding-top: 16px;
+		padding-left: 20px;
+		text-shadow: 4px 4px #0004;
+	}
+}
+
+/* For mobile: */
+@media only screen and (max-width: 1023px) {
+	#header-container {
+		display: grid;
+	}
+	
+	#logo-pc {
+		display: none;
+	}
+	
+	#logo-mobile{
+		position: absolute;
+		height: 96px;
+		width: 96px;
+		background-image: url(../gfx/logo.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		left: 8px;
+		top: 20px;
+	}
+	
+	logo {
+		font-size: 32px;
+		padding-top: 16px;
+		padding-left: 112px;
+		text-shadow: 4px 4px #0004;
+		height: 112px;
+		width: 375px;
+	}
+	
+	#map-pc {
+		display: none;
+	}
+	
+	.nes-container-home {
+		display: grid;
+	}
+	
+	#social-pc {
+		display: none;
+	}
+	
+	footer {
+		text-align: center;
+		padding: 16px 0px;
+	}
+	
+	menu.nes-container.is-dark.is-outline {
+		margin: 8px 8px 8px 8px;
+		width: calc(100% - 16px);;
+	}
+	
+	menu.nes-container.is-dark.is-outline {
+		margin: 8px 8px 8px 8px;
+		width: calc(100% - 16px);;
+	}
 }
 
 menu .link:not([href]):not([tabindex]) {
@@ -104,11 +199,7 @@ menu .link:not([href]):not([tabindex]):hover {
     width: 880px;
 }
 
-.nes-container-home {
-    display: flex;
-}
-
-#home_container div {
+#home-container div {
     flex-grow: 1;
 }
 
@@ -124,11 +215,6 @@ menu .link:not([href]):not([tabindex]):hover {
 
 div.nes-container.is-dark.is-outline {
     margin: 8px;
-}
-
-menu.nes-container.is-dark.is-outline {
-    margin: 8px 8px 8px auto;
-    width: 600px;
 }
 
 .nes-container.is-dark.is-outline {
@@ -220,14 +306,6 @@ menu .link:hover:before {
     background-image: url(../gfx/discord.png);
 }
 
-footer {
-    position: fixed;
-    bottom: 16px;
-    width: 320px;
-    right: 8px;
-	text-align: center;
-}
-
 footer a:hover {
     color: white;
 }
@@ -263,11 +341,6 @@ footer a:hover {
 
 .nes-text.is-warning {
     color: #f7d51d;
-}
-
-menu.nes-container.is-dark.is-outline {
-    margin: 8px 8px 8px auto;
-    width: 600px;
 }
 
 .nes-container.is-dark.is-outline {

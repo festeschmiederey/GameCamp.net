@@ -26,12 +26,12 @@
             sites.forEach(function(site) {
                 $("#" + site).click(function(item){
                     sites.forEach(function(site2) {
-                        $("#" + site2 + "_container").css("display", site == site2 ? "block" : "none");
+                        $("#" + site2 + "-container").css("display", site == site2 ? "block" : "none");
                     });
                 });
             });
 
-            $("#" + sites[0] + "_container").css("display", "block");
+            $("#" + sites[0] + "-container").css("display", "block");
 
             const tabs = ["tab1", "tab2", "tab3", "tab4", "tab5", "tab6"];
 
@@ -51,8 +51,9 @@
         });
       </script>
     <body>
-        <div style="display: flex;">
+        <div id="header-container">
             <logo class="nes-text is-warning">GAMECAMP MUNICH</logo>
+			<div id="logo-mobile"></div>
             <menu class="nes-container is-dark is-outline with-title">
                 <div id="home" class="nes-text is-warning link">Home</div>
                 <div id="schedule" class="nes-text is-warning link">Zeitplan</div>
@@ -60,20 +61,20 @@
             </menu>
         </div>
 
-        <div id="home_container" style="display: none;">
+        <div id="home-container" style="display: none;">
             <div class="nes-container-home">
                 <div class="nes-container-left">
-                    <div>
+                    <div id="logo-pc">
                         <canvas id="canvas" style="width: 768px; height: 384px; image-rendering: pixelated;"></canvas>
                     </div>
                     <div class="nes-container-bottom">
-                        <div class="nes-container-center">
+                        <div id="social-pc" class="nes-container-center">
                             <div class="nes-container is-dark is-outline is-other">
                                 <a class="icon twitter" href="https://twitter.com/gamecampmunich" target="_blank"></a>
                                 <a class="icon discord" href="https://discord.gg/G4q65NdRU" target="_blank"></a>
                             </div>
                         </div>
-                        <div class="nes-container-left">
+                        <div  id="map-pc" class="nes-container-left">
                             <div class="nes-container is-dark is-outline is-map">
                                 <yellow>Anfahrt</yellow>
                                 <br><br>
@@ -170,7 +171,7 @@
             </div>
         </div>
 
-        <div id="schedule_container" style="display: none;">
+        <div id="schedule-container" style="display: none;">
             <div class="schedule">
                 <div class="single_schedule">
                     <div class="nes-table-title">Samstag, 28.10.2023</div>
@@ -205,7 +206,7 @@
             </div>
         </div>
 
-        <div id="faq_container" style="display: none;">
+        <div id="faq-container" style="display: none;">
             <div class="nes-container is-dark is-outline">
                 <header>Wann und wo wird das GameCamp 2023 stattfinden?</header>
                 <p>Das GameCamp Munich findet am 28. Oktober und 29. Oktober 2023 im SAE Institute München statt! Zielstattstraße 30, 81379 München</p>
