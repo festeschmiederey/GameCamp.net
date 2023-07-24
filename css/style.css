@@ -288,6 +288,7 @@ menu .link:hover:before {
     display: block;
     background-size: contain;
     image-rendering: pixelated;
+    background-repeat: no-repeat;
 }
 
 .twitter:hover {
@@ -304,6 +305,10 @@ menu .link:hover:before {
 
 .discord {
     background-image: url(../gfx/discord.png);
+}
+
+.linkedin {
+    background-image: url(../gfx/LI-In-Bug.png);
 }
 
 footer a:hover {
