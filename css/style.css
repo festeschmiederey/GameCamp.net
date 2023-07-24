@@ -60,6 +60,7 @@ a:not([href]):not([tabindex]):hover {
 @media only screen and (min-width: 1024px) {
 	#header-container {
 		display: flex;
+        overflow: auto;
 	}
 	
 	#map-mobile {
@@ -104,6 +105,7 @@ a:not([href]):not([tabindex]):hover {
 @media only screen and (max-width: 1023px) {
 	#header-container {
 		display: grid;
+        overflow: auto;
 	}
 	
 	#logo-pc {
@@ -346,6 +348,7 @@ footer a:hover {
 
 .nes-text.is-warning {
     color: #f7d51d;
+    overflow: auto;
 }
 
 .nes-container.is-dark.is-outline {
