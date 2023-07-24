@@ -1,7 +1,7 @@
 function InitGame()
 {
 	InitGraphics(256, 128, "gfx/gc_tiles.png");
-	InitInput();
+	//InitInput();
 	
 	let palette = " ║ ═ ╚ ╔ ╗ ╝ ╣ ╩ ╠ ╦ ╬ ";
 
