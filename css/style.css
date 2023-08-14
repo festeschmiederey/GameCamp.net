@@ -342,7 +342,11 @@ menu .link:hover:before {
 }
 
 .linkedin {
-    background-image: url(../gfx/LI-In-Bug.png);
+    background-image: url(../gfx/linkedin.png);
+}
+
+.linkedin:hover {
+    background-image: url(../gfx/linkedin_active.png);
 }
 
 footer a:hover {
