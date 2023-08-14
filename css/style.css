@@ -141,6 +141,7 @@ a:not([href]):not([tabindex]):hover {
 	}
 	
 	logo {
+		font-size: 32px;
 		padding-top: 16px;
 		padding-left: 112px;
 		text-shadow: 4px 4px #0004;
@@ -375,7 +376,6 @@ footer a:hover {
 
 .nes-text.is-warning {
     color: #f7d51d;
-    overflow: auto;
 }
 
 .nes-container.is-dark.is-outline {
