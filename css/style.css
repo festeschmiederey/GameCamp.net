@@ -17,6 +17,7 @@ body {
     background: rgb(72,79,98);
     background: radial-gradient(at bottom right, rgb(55 114 122) 0%, rgb(40 81 96) 25%, rgb(44 39 56) 100%);
     font-family: "Press Start 2P";
+	font-size: 16px;
 	line-height: 1.5;
 	height: 100%;
 	background-repeat: no-repeat;
@@ -99,6 +100,22 @@ a:not([href]):not([tabindex]):hover {
 		padding-left: 20px;
 		text-shadow: 4px 4px #0004;
 	}
+	
+	.single_schedule {
+		margin: auto;
+		padding-top: 16px;
+		width: 880px;
+	}
+	
+	.nes-table.is-dark.is-outline {
+		width: 880px;
+	}
+	
+	.is-sponsor a {
+		display: block;
+		padding: 16px 0px;
+		width: 320px;
+	}
 }
 
 /* For mobile: */
@@ -129,7 +146,13 @@ a:not([href]):not([tabindex]):hover {
 		padding-left: 112px;
 		text-shadow: 4px 4px #0004;
 		height: 112px;
-		width: 368px;
+	}
+	
+	.single_schedule {
+		font-size: 24px;
+		margin-left: 8px;
+		padding-top: 16px;
+		width: calc(100% - 8px);
 	}
 	
 	#map-pc {
@@ -151,12 +174,28 @@ a:not([href]):not([tabindex]):hover {
 	
 	menu.nes-container.is-dark.is-outline {
 		margin: 8px 8px 8px 8px;
-		width: calc(100% - 16px);;
+		width: calc(100% - 16px);
+		font-size: 24px;
 	}
 	
 	menu.nes-container.is-dark.is-outline {
 		margin: 8px 8px 8px 8px;
-		width: calc(100% - 16px);;
+		width: calc(100% - 16px);
+	}
+	
+	.nes-table.is-dark.is-outline {
+		width: calc(100% - 8px);
+	}
+	
+	.is-sponsor a {
+		display: inline;
+		padding: 32px 24px;
+		width: 100%;
+	}
+	
+	.is-sponsor yellow {
+		display: block;
+		margin-bottom: 16px;
 	}
 }
 
@@ -198,7 +237,6 @@ menu .link:not([href]):not([tabindex]):hover {
     border-spacing: 0px;
     image-rendering: pixelated;
     padding: 2px;
-    width: 880px;
 }
 
 #home-container div {
@@ -207,12 +245,6 @@ menu .link:not([href]):not([tabindex]):hover {
 
 .schedule {
     display: flex;
-}
-
-.single_schedule {
-    margin: auto;
-    padding-top: 16px;
-    width: 880px;
 }
 
 div.nes-container.is-dark.is-outline {
@@ -320,10 +352,6 @@ footer a:hover {
 .is-other {
     width: 104px;
     height: 698px;
-}
-
-.is-sponsor {
-    width: 320px;
 }
 
 .is-sponsor img {
