@@ -25,7 +25,7 @@ body {
 }
 
 header {
-    color: #e76e55;
+    color: #e79355;
     display: block;
 }
 
@@ -37,8 +37,16 @@ blue {
     color: #209cee;
 }
 
+.blue {
+    color: #209cee;
+}
+
 yellow {
     color: #f7d51d;
+}
+
+red {
+    color: #e79355;
 }
 
 .link {
@@ -47,6 +55,7 @@ yellow {
 
 a {
 	text-decoration: none;
+	color: #f7d51d;
 }
 
 a:hover {
@@ -275,7 +284,7 @@ div.nes-container.is-dark.is-outline {
 }
 
 .nes-table-title {
-    color: white;
+    color: #e79355;
     padding-bottom: 8px;
 }
 
@@ -355,7 +364,7 @@ footer a:hover {
 
 .is-other {
     width: 104px;
-    height: 698px;
+    height: 654px;
 }
 
 .is-sponsor img {
@@ -451,13 +460,25 @@ p {
 }
 
 #ticket-container strong {
-	color: #f7d51d;
+	color: #e79355;
+	display: block;
 	font-weight: normal !important;
+	padding-bottom: 8px;
 }
 
 #ticket-container h3 {
-	color: #f7d51d;
+	color: #209cee;
 	font-weight: normal !important;
+}
+
+#ticket-container ins {
+	font-weight: normal !important;
+	font-size: 100%;
+}
+
+#ticket-container small {
+	color: #fff8;
+	font-size: 100%;
 }
 
 #ticket-container input {
@@ -465,15 +486,40 @@ p {
 	color: #000;
 	font-size: 16px;
 	font-family: "Press Start 2P";
-	height: 43px;
+	height: 49px;
 }
 
 #ticket-container button {
 	border-width: 4px;
 	font-size: 16px;
 	font-family: "Press Start 2P";
+	padding-top: 12px;
 }
 
 #ticket-container input:focus {
 	box-shadow: none !important;
+}
+
+.pretix-widget-item{
+	border-bottom: solid #fff2;
+}
+
+del.pretix-widget-pricebox-original-price {
+    color: #fff4 !important;
+}
+
+.pretix-widget-item-description {
+	padding-bottom: 8px;
+}
+
+.nes-container a:hover {
+	color: #fff;
+}
+
+.flyer a:hover {
+	color: #fff;
+}
+
+footer a:hover {
+	color: #fff;
 }
