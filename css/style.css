@@ -439,3 +439,41 @@ p {
 .nes-table tbody tr:last-child td, .nes-table tbody tr:last-child th, .nes-table thead:last-child tr:last-child td, .nes-table thead:last-child tr:last-child th {
     border-bottom-width: 0;
 }
+
+.pretix-widget {
+	border-style: none !important;
+	color: #fff;
+}
+
+#ticket-container {
+	font-size: 16px;
+	font-family: "Press Start 2P";
+}
+
+#ticket-container strong {
+	color: #f7d51d;
+	font-weight: normal !important;
+}
+
+#ticket-container h3 {
+	color: #f7d51d;
+	font-weight: normal !important;
+}
+
+#ticket-container input {
+	border-width: 4px;
+	color: #000;
+	font-size: 16px;
+	font-family: "Press Start 2P";
+	height: 43px;
+}
+
+#ticket-container button {
+	border-width: 4px;
+	font-size: 16px;
+	font-family: "Press Start 2P";
+}
+
+#ticket-container input:focus {
+	box-shadow: none !important;
+}
