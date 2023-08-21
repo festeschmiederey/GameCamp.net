@@ -56,13 +56,13 @@
           tabs.forEach(function (tab2) {
             $("#" + tab2 + "_content").css(
               "display",
-              tab == tab2 ? "block" : "none"
+              tab == tab2 ? "flex" : "none"
             );
           });
         });
       });
 
-      $("#" + tabs[0] + "_content").css("display", "block");
+      $("#" + tabs[0] + "_content").css("display", "flex");
 
       InitGame();
 
@@ -150,105 +150,114 @@
           <div class="nes-container is-dark is-outline">
             <header id="tab1">Was ist das gamecamp?</header>
             <div id="tab1_content" style="display: none">
-              <br />
-              <p>
-                Das GameCamp Munich ist ein Barcamp, also eine sogenannte
-                Unkonferenz. Alle Teilnehmenden k&ouml;nnen ihre eigenen
-                Sessions halten und damit Inhalt und Ablauf des Barcamps selbst
-                definieren. Inhaltlich dreht sich beim GameCamp Munich alles um
-                die Themen Games, Gameskultur und Gamesentwicklung.
-              </p>
-              <p>
-                Dieses Jahr findet das #gcmuc am <blue>28.</blue> und
-                <blue>29. Oktober</blue> statt, und zwar im
-                <blue>SAE Institute München</blue> Zielstattstraße 30, 81379
-                München
-              </p>
+				<div>
+				  <br />
+				  <p>
+					Das GameCamp Munich ist ein Barcamp, also eine sogenannte
+					Unkonferenz. Alle Teilnehmenden k&ouml;nnen ihre eigenen
+					Sessions halten und damit Inhalt und Ablauf des Barcamps selbst
+					definieren. Inhaltlich dreht sich beim GameCamp Munich alles um
+					die Themen Games, Gameskultur und Gamesentwicklung.
+				  </p>
+				  <p>
+					Dieses Jahr findet das #gcmuc am <blue>28.</blue> und
+					<blue>29. Oktober</blue> statt, und zwar im
+					<blue>SAE Institute München</blue> Zielstattstraße 30, 81379
+					München
+				  </p>
+				</div>
             </div>
           </div>
           <div class="nes-container is-dark is-outline">
             <header id="tab2">Warum sollte ich vorbeikommen?</header>
             <div id="tab2_content" style="display: none">
-              <br />
-              <p>
-                Das GameCamp ist f&uuml;r Menschen gedacht, die gemeinsam Games
-                feiern wollen. Ob das dein Minecraft Server, dein Games-Prototyp
-                oder deine neue Leidenschaft f&uuml;r Cosplay ist: Auf dem
-                GameCamp hat jede*r die M&ouml;glichkeit alles rund um Games zu
-                sharen.
-              </p>
-              <p>
-                Wir machen das in <blue>Sessions</blue>, also fest definierte
-                Zeit Bl&ouml;cken die jede*r dann mit Inhalt füllen kann, wie es
-                passt. Wenn du ein Thema hast, worüber du viel weißt oder was du
-                unbedingt teilen willst, bereite am besten etwas vor. Eine
-                Präsentation, ein Video oder vielleicht sogar ein Gameprojekt.
-                Für eine Diskussionsrunde kannst du auch ein paar Fragen
-                vorbereiten und interessante Artikel oder Videos.
-              </p>
-              <blue
-                >Wir freuen uns auf ein Event mit vielen verschiedenen Themen
-                und Camper*innen!</blue
-              >
+				<div>
+				  <br />
+				  <p>
+					Das GameCamp ist f&uuml;r Menschen gedacht, die gemeinsam Games
+					feiern wollen. Ob das dein Minecraft Server, dein Games-Prototyp
+					oder deine neue Leidenschaft f&uuml;r Cosplay ist: Auf dem
+					GameCamp hat jede*r die M&ouml;glichkeit alles rund um Games zu
+					sharen.
+				  </p>
+				  <p>
+					Wir machen das in <blue>Sessions</blue>, also fest definierte
+					Zeit Bl&ouml;cken die jede*r dann mit Inhalt füllen kann, wie es
+					passt. Wenn du ein Thema hast, worüber du viel weißt oder was du
+					unbedingt teilen willst, bereite am besten etwas vor. Eine
+					Präsentation, ein Video oder vielleicht sogar ein Gameprojekt.
+					Für eine Diskussionsrunde kannst du auch ein paar Fragen
+					vorbereiten und interessante Artikel oder Videos.
+				  </p>
+				  <blue
+					>Wir freuen uns auf ein Event mit vielen verschiedenen Themen
+					und Camper*innen!</blue
+				  >
+				</div>
             </div>
           </div>
           <div class="nes-container is-dark is-outline">
             <header id="tab3">Auch DU kannst Speaker*in sein!</header>
             <div id="tab3_content" style="display: none">
-              <br />
-              <p>
-                Das GameCamp Munich ist der perfekte Ort, um von deinem nerdigen
-                Hobby, der besten Spieleidee der Welt oder einem
-                dreik&ouml;pfigen Affen zu erzählen. Eine gute Faustregel für
-                einen Vortrag lautet: Welche Geschichte kannst nur du erzählen,
-                welche Erfahrung oder Erkenntnis möchtest du mit anderen teilen?
-              </p>
+				<div>
+				  <br />
+				  <p>
+					Das GameCamp Munich ist der perfekte Ort, um von deinem nerdigen
+					Hobby, der besten Spieleidee der Welt oder einem
+					dreik&ouml;pfigen Affen zu erzählen. Eine gute Faustregel für
+					einen Vortrag lautet: Welche Geschichte kannst nur du erzählen,
+					welche Erfahrung oder Erkenntnis möchtest du mit anderen teilen?
+				  </p>
+			  </div>
             </div>
           </div>
           <div class="nes-container is-dark is-outline">
             <header id="tab5">Was passiert vor Ort?</header>
             <div id="tab5_content" style="display: none">
-              <br />
-              <p>
-                Nach eine kurzen Willkommens- und Kennenlernrunde, kannst du
-                deine Session pitchen. Das heißt, du bekommst die Gelegenheit
-                dein Thema allen anderen vorzustellen. Wir suchen dann mit dir
-                gemeinsam einen Platz im Sessionplan, wo du dann Zeit hast,
-                deine Session zu halten. Ob das ein kleiner Workshop, eine
-                Präsentation oder eine Diskussionsrunde ist: Deiner Fantasie
-                sind bis auf die Zeit keine Grenzen gesetzt. Und es sollte halt
-                was mit Games zu tun haben. Jeder Raum verfügt über
-                Präsentationsmöglichkeiten und Sitzgelegenheiten für die anderen
-                Camper*innen.
-              </p>
-              <p>
-                Das GameCamp München wird derzeit mit ehrenamtlicher Hilfe von
-                der Festeschmiederey und dem Support von Games/Bavaria
-                (gefördert durch das Bayerische Staatsministerium für Digitales)
-                und der Unterstützung der Teilnehmenden vor Ort organisiert. Die
-                Stimmung ist stets ausgelassen und wir möchten, dass sich alle
-                willkommen und sicher fühlen. Hierzu gibt es einen
-                Verhaltenskodex (Code of Conduct) an den sich unsere
-                Teilnehmenden halten müssen. Wir freuen uns auf ein kreatives,
-                entspanntes und interessantes #gcmuc23 mit vielen neuen
-                Gesichtern!
-              </p>
+				<div>
+				  <br />
+				  <p>
+					Nach eine kurzen Willkommens- und Kennenlernrunde, kannst du
+					deine Session pitchen. Das heißt, du bekommst die Gelegenheit
+					dein Thema allen anderen vorzustellen. Wir suchen dann mit dir
+					gemeinsam einen Platz im Sessionplan, wo du dann Zeit hast,
+					deine Session zu halten. Ob das ein kleiner Workshop, eine
+					Präsentation oder eine Diskussionsrunde ist: Deiner Fantasie
+					sind bis auf die Zeit keine Grenzen gesetzt. Und es sollte halt
+					was mit Games zu tun haben. Jeder Raum verfügt über
+					Präsentationsmöglichkeiten und Sitzgelegenheiten für die anderen
+					Camper*innen.
+				  </p>
+				  <p>
+					Das GameCamp München wird derzeit mit ehrenamtlicher Hilfe von
+					der Festeschmiederey und dem Support von Games/Bavaria
+					(gefördert durch das Bayerische Staatsministerium für Digitales)
+					und der Unterstützung der Teilnehmenden vor Ort organisiert. Die
+					Stimmung ist stets ausgelassen und wir möchten, dass sich alle
+					willkommen und sicher fühlen. Hierzu gibt es einen
+					Verhaltenskodex (Code of Conduct) an den sich unsere
+					Teilnehmenden halten müssen. Wir freuen uns auf ein kreatives,
+					entspanntes und interessantes #gcmuc23 mit vielen neuen
+					Gesichtern!
+				  </p>
+				</div>
             </div>
           </div>
           <div class="nes-container is-dark is-outline">
             <header id="tab6">Auf dem laufenden bleiben</header>
             <div id="tab6_content" style="display: none">
-              <br />
-              <p>
-                Willst du über alles Wichtige, auf dem Laufenden bleiben kannst
-                du dich hier ganz einfach mit deiner E-Mail-Adresse
-                registrieren.
-              </p>
-              <br />
-                <a href="https://forms.gle/4dq8B8z45TBBvpNVA" target="_blank">
-                  Hier für Benachrichtigungen registrieren
-                </a>
-            </div>
+				<div>
+				  <br />
+				  <p>
+					Willst du über alles Wichtige, auf dem Laufenden bleiben kannst
+					du dich hier ganz einfach mit deiner E-Mail-Adresse
+					registrieren.
+				  </p>
+					<a class="link" href="https://forms.gle/4dq8B8z45TBBvpNVA" target="_blank">
+					  Hier für Benachrichtigungen registrieren
+					</a>
+				</div>
+			</div>
           </div>
           <div class="nes-container is-dark is-outline">
             <a
@@ -257,13 +266,13 @@
               target="_blank"
               download="gcmuc_2023.ics"
             >
-              Jetzt meinem Kalender hinzufügen!
+              Jetzt meinem Kalender hinzufügen! (ICS)
             </a>
           </div>
         </div>
         <div class="nes-container-right2">
           <div class="nes-container is-dark is-outline is-sponsor">
-            <red>Sponsoren</red>
+            <header>Sponsoren</header>
             <a href="https://www.hologate.com/" target="_blank">
               <img
                 src="gfx/sponsor_hologate_white.png"
@@ -288,7 +297,7 @@
               <img
                 src="gfx/sponsor_thera_bytes.png"
                 width="256"
-                style="max-height: 122px"
+                style="max-height: 90px"
               />
             </a>
           </div>
@@ -299,7 +308,7 @@
               target="_blank"
               download="gcmuc_sponsoring_2023_de.pdf"
             >
-              Sponsoren Flyer downloaden
+              Sponsoren Flyer downloaden (PDF)
             </a>
           </div>
         </div>
@@ -508,8 +517,6 @@
       <a class="link" href="/privacy.html" target="_blank"
         >Datenschutz</a
       >
-      <br />
-      <br />
       <a class="link" href="/imprint.html" target="_blank"
         >Impressum</a
       >

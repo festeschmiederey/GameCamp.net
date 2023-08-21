@@ -94,21 +94,19 @@ a:not([href]):not([tabindex]):hover {
 	}
 	
 	footer {
-		position: fixed;
-		bottom: 16px;
-		width: 320px;
-		right: 8px;
+		display: flex;
+		padding: 16px 0px;
+	}
+	
+	footer a {
+		width: 100%;
 		text-align: center;
 	}
 	
 	menu.nes-container.is-dark.is-outline {
 		margin: 8px 8px 8px auto;
 		width: 600px;
-	}
-	
-	menu.nes-container.is-dark.is-outline {
-		margin: 8px 8px 8px auto;
-		width: 600px;
+		height: 58px;
 	}
 	
 	logo {
@@ -185,8 +183,13 @@ a:not([href]):not([tabindex]):hover {
 	}
 	
 	footer {
-		text-align: center;
+		display: flex;
 		padding: 16px 0px;
+	}
+	
+	footer a {
+		width: 100%;
+		text-align: center;
 	}
 	
 	menu.nes-container.is-dark.is-outline {
@@ -530,4 +533,8 @@ del.pretix-widget-pricebox-original-price {
 
 footer a:hover {
 	color: #fff;
+}
+
+#faq-container header {
+	padding-bottom: 16px;
 }
