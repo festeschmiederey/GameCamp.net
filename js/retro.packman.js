@@ -49,6 +49,7 @@ function InitGame()
 	AddComponent("Drop", " ");
 	AddComponent("HUD");
 	AddComponent("Button", "");
+	AddComponent("Breakable");
 
 	// Create System
 	AddSystem("Create", OnSimPositionSystem, ["Map", "Position"]);
@@ -105,25 +106,25 @@ function InitGame()
 	AddBlueprint("#", ["Tile", "Map"], {Sprite: 121});
 	AddBlueprint("T", ["Tile", "Map"], {Sprite: 84});
 	
-	AddBlueprint("║", ["Tile", "Map"], {Sprite: 16});
-	AddBlueprint("═", ["Tile", "Map"], {Sprite: 1});
+	AddBlueprint("║", ["Tile", "Map", "Breakable"], {Sprite: 16});
+	AddBlueprint("═", ["Tile", "Map", "Breakable"], {Sprite: 1});
 
-	AddBlueprint("╚", ["Tile", "Map"], {Sprite: 32});
-	AddBlueprint("╔", ["Tile", "Map"], {Sprite: 0});
-	AddBlueprint("╗", ["Tile", "Map"], {Sprite: 2});
-	AddBlueprint("╝", ["Tile", "Map"], {Sprite: 34});
+	AddBlueprint("╚", ["Tile", "Map", "Breakable"], {Sprite: 32});
+	AddBlueprint("╔", ["Tile", "Map", "Breakable"], {Sprite: 0});
+	AddBlueprint("╗", ["Tile", "Map", "Breakable"], {Sprite: 2});
+	AddBlueprint("╝", ["Tile", "Map", "Breakable"], {Sprite: 34});
 
-	AddBlueprint("╣", ["Tile", "Map"], {Sprite: 48});
-	AddBlueprint("╩", ["Tile", "Map"], {Sprite: 19});
-	AddBlueprint("╠", ["Tile", "Map"], {Sprite: 35});
-	AddBlueprint("╦", ["Tile", "Map"], {Sprite: 3});
+	AddBlueprint("╣", ["Tile", "Map", "Breakable"], {Sprite: 48});
+	AddBlueprint("╩", ["Tile", "Map", "Breakable"], {Sprite: 19});
+	AddBlueprint("╠", ["Tile", "Map", "Breakable"], {Sprite: 35});
+	AddBlueprint("╦", ["Tile", "Map", "Breakable"], {Sprite: 3});
 
-	AddBlueprint("╬", ["Tile", "Map"], {Sprite: 49});
+	AddBlueprint("╬", ["Tile", "Map", "Breakable"], {Sprite: 49});
 
-	AddBlueprint("╞", ["Tile", "Map"], {Sprite: 232});
-	AddBlueprint("╡", ["Tile", "Map"], {Sprite: 233});
-	AddBlueprint("╨", ["Tile", "Map"], {Sprite: 234});
-	AddBlueprint("╥", ["Tile", "Map"], {Sprite: 235});
+	AddBlueprint("╞", ["Tile", "Map", "Breakable"], {Sprite: 232});
+	AddBlueprint("╡", ["Tile", "Map", "Breakable"], {Sprite: 233});
+	AddBlueprint("╨", ["Tile", "Map", "Breakable"], {Sprite: 234});
+	AddBlueprint("╥", ["Tile", "Map", "Breakable"], {Sprite: 235});
 
 	AddBlueprint("│", ["Tile", "Map"], {Sprite: 253});
 	AddBlueprint("─", ["Tile", "Map"], {Sprite: 237});
@@ -133,45 +134,45 @@ function InitGame()
 	AddBlueprint("┐", ["Tile", "Map"], {Sprite: 238});
 	AddBlueprint("┘", ["Tile", "Map"], {Sprite: 254});
 
-	AddBlueprint("0", ["Tile", "Map"], {Sprite: 176});
-	AddBlueprint("1", ["Tile", "Map"], {Sprite: 177});
-	AddBlueprint("2", ["Tile", "Map"], {Sprite: 178});
-	AddBlueprint("3", ["Tile", "Map"], {Sprite: 179});
-	AddBlueprint("4", ["Tile", "Map"], {Sprite: 180});
-	AddBlueprint("5", ["Tile", "Map"], {Sprite: 181});
-	AddBlueprint("6", ["Tile", "Map"], {Sprite: 182});
-	AddBlueprint("7", ["Tile", "Map"], {Sprite: 183});
-	AddBlueprint("8", ["Tile", "Map"], {Sprite: 184});
-	AddBlueprint("9", ["Tile", "Map"], {Sprite: 185});
+	AddBlueprint("0", ["Tile", "Map", "Breakable"], {Sprite: 176});
+	AddBlueprint("1", ["Tile", "Map", "Breakable"], {Sprite: 177});
+	AddBlueprint("2", ["Tile", "Map", "Breakable"], {Sprite: 178});
+	AddBlueprint("3", ["Tile", "Map", "Breakable"], {Sprite: 179});
+	AddBlueprint("4", ["Tile", "Map", "Breakable"], {Sprite: 180});
+	AddBlueprint("5", ["Tile", "Map", "Breakable"], {Sprite: 181});
+	AddBlueprint("6", ["Tile", "Map", "Breakable"], {Sprite: 182});
+	AddBlueprint("7", ["Tile", "Map", "Breakable"], {Sprite: 183});
+	AddBlueprint("8", ["Tile", "Map", "Breakable"], {Sprite: 184});
+	AddBlueprint("9", ["Tile", "Map", "Breakable"], {Sprite: 185});
 
-	AddBlueprint("a", ["Tile", "Map"], {Sprite: 192});
-	AddBlueprint("b", ["Tile", "Map"], {Sprite: 193});
-	AddBlueprint("c", ["Tile", "Map"], {Sprite: 194});
-	AddBlueprint("d", ["Tile", "Map"], {Sprite: 195});
-	AddBlueprint("e", ["Tile", "Map"], {Sprite: 196});
-	AddBlueprint("f", ["Tile", "Map"], {Sprite: 197});
-	AddBlueprint("g", ["Tile", "Map"], {Sprite: 198});
-	AddBlueprint("h", ["Tile", "Map"], {Sprite: 199});
-	AddBlueprint("i", ["Tile", "Map"], {Sprite: 200});
-	AddBlueprint("j", ["Tile", "Map"], {Sprite: 201});
-	AddBlueprint("k", ["Tile", "Map"], {Sprite: 202});
-	AddBlueprint("l", ["Tile", "Map"], {Sprite: 203});
-	AddBlueprint("m", ["Tile", "Map"], {Sprite: 204});
-	AddBlueprint("n", ["Tile", "Map"], {Sprite: 205});
-	AddBlueprint("o", ["Tile", "Map"], {Sprite: 206});
-	AddBlueprint("p", ["Tile", "Map"], {Sprite: 207});
-	AddBlueprint("q", ["Tile", "Map"], {Sprite: 208});
-	AddBlueprint("r", ["Tile", "Map"], {Sprite: 209});
-	AddBlueprint("s", ["Tile", "Map"], {Sprite: 210});
-	AddBlueprint("t", ["Tile", "Map"], {Sprite: 211});
-	AddBlueprint("u", ["Tile", "Map"], {Sprite: 212});
-	AddBlueprint("v", ["Tile", "Map"], {Sprite: 213});
-	AddBlueprint("w", ["Tile", "Map"], {Sprite: 214});
-	AddBlueprint("x", ["Tile", "Map"], {Sprite: 215});
-	AddBlueprint("y", ["Tile", "Map"], {Sprite: 216});
-	AddBlueprint("z", ["Tile", "Map"], {Sprite: 217});
+	AddBlueprint("a", ["Tile", "Map", "Breakable"], {Sprite: 192});
+	AddBlueprint("b", ["Tile", "Map", "Breakable"], {Sprite: 193});
+	AddBlueprint("c", ["Tile", "Map", "Breakable"], {Sprite: 194});
+	AddBlueprint("d", ["Tile", "Map", "Breakable"], {Sprite: 195});
+	AddBlueprint("e", ["Tile", "Map", "Breakable"], {Sprite: 196});
+	AddBlueprint("f", ["Tile", "Map", "Breakable"], {Sprite: 197});
+	AddBlueprint("g", ["Tile", "Map", "Breakable"], {Sprite: 198});
+	AddBlueprint("h", ["Tile", "Map", "Breakable"], {Sprite: 199});
+	AddBlueprint("i", ["Tile", "Map", "Breakable"], {Sprite: 200});
+	AddBlueprint("j", ["Tile", "Map", "Breakable"], {Sprite: 201});
+	AddBlueprint("k", ["Tile", "Map", "Breakable"], {Sprite: 202});
+	AddBlueprint("l", ["Tile", "Map", "Breakable"], {Sprite: 203});
+	AddBlueprint("m", ["Tile", "Map", "Breakable"], {Sprite: 204});
+	AddBlueprint("n", ["Tile", "Map", "Breakable"], {Sprite: 205});
+	AddBlueprint("o", ["Tile", "Map", "Breakable"], {Sprite: 206});
+	AddBlueprint("p", ["Tile", "Map", "Breakable"], {Sprite: 207});
+	AddBlueprint("q", ["Tile", "Map", "Breakable"], {Sprite: 208});
+	AddBlueprint("r", ["Tile", "Map", "Breakable"], {Sprite: 209});
+	AddBlueprint("s", ["Tile", "Map", "Breakable"], {Sprite: 210});
+	AddBlueprint("t", ["Tile", "Map", "Breakable"], {Sprite: 211});
+	AddBlueprint("u", ["Tile", "Map", "Breakable"], {Sprite: 212});
+	AddBlueprint("v", ["Tile", "Map", "Breakable"], {Sprite: 213});
+	AddBlueprint("w", ["Tile", "Map", "Breakable"], {Sprite: 214});
+	AddBlueprint("x", ["Tile", "Map", "Breakable"], {Sprite: 215});
+	AddBlueprint("y", ["Tile", "Map", "Breakable"], {Sprite: 216});
+	AddBlueprint("z", ["Tile", "Map", "Breakable"], {Sprite: 217});
 
-	AddBlueprint("-", ["Tile", "Map"], {Sprite: 218});
+	AddBlueprint("-", ["Tile", "Map", "Breakable"], {Sprite: 218});
 	
 	// Buttons
 	AddBlueprint("<", ["Tile", "Map"], {Sprite: 219, Button: "left"});
@@ -180,7 +181,7 @@ function InitGame()
 	AddBlueprint("V", ["Tile", "Map"], {Sprite: 222, Button: "down"});
 
 	// Objects
-	AddBlueprint("P", ["Object", "Map", "Pushable", "Movement", "Position", "Action", "Speed"], {Sprite: 122});
+	AddBlueprint("Q", ["Object", "Map", "Pushable", "Movement", "Position", "Action", "Speed"], {Sprite: 122});
 
 	// Items
 	AddBlueprint("H", ["Map"], {Sprite: 171, Item: {component: "Health", param: "value", value: 2}});
@@ -524,6 +525,11 @@ function OnObjectCollisionSystem(entity, object)
 
 function OnTileCollisionSystem(entity, tile)
 {
+	if (entity.Level >= 2 && tile.Breakable == true)
+	{
+		RemoveMapEntity("Tile", tile.Map.x, tile.Map.y);
+	}
+
 	entity.Action = "idle";
 	entity.Movement.x = 0;
 	entity.Movement.y = 0;
