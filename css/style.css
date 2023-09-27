@@ -25,24 +25,24 @@ body {
 }
 
 header {
-    color: #e79355;
+    color: #cd80b0;
     display: block;
 }
 
 header:hover {
-    color: #f7d51d;
+    color: #6f98d9;
 }
 
 blue {
-    color: #209cee;
+    color: #6f98d9;
 }
 
 .blue {
-    color: #209cee;
+    color: #6f98d9;
 }
 
 yellow {
-    color: #f7d51d;
+    color: #f0e078;
 }
 
 red {
@@ -63,7 +63,7 @@ red {
 
 a {
 	text-decoration: none;
-	color: #f7d51d;
+	color: #f0e078;
 }
 
 a:hover {
@@ -75,7 +75,7 @@ a:not([href]):not([tabindex]):hover {
 }
 
 /* For desktop: */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1760px) {
 	#header-container {
 		display: flex;
         overflow: auto;
@@ -134,7 +134,7 @@ a:not([href]):not([tabindex]):hover {
 }
 
 /* For mobile: */
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1756px) {
 	#header-container {
 		display: grid;
         overflow: auto;
@@ -220,12 +220,12 @@ a:not([href]):not([tabindex]):hover {
 }
 
 menu .link:not([href]):not([tabindex]) {
-    color: #f7d51d;
+    color: #f0e078;
     margin-top: 2px;
 }
 
 menu .link:not([href]):not([tabindex]):hover {
-    color: #f7d51d;
+    color: #f0e078;
     margin-top: 2px;
 }
 
@@ -295,7 +295,7 @@ div.nes-container.is-dark.is-outline {
 }
 
 .nes-table-title {
-    color: #e79355;
+    color: #cd80b0;
     padding-bottom: 8px;
 }
 
@@ -304,7 +304,7 @@ div.nes-container.is-dark.is-outline {
 }
 
 .warning-text {
-    color: #f7d51d;
+    color: #f0e078;
 }
 
 div.nes-container.is-dark {
@@ -333,7 +333,7 @@ menu .link:before {
 
 menu .link:hover:before {
     content: ">";
-    color: #f7d51d;
+    color: #f0e078;
 }
 
 .icon {
@@ -399,7 +399,7 @@ footer a:hover {
 }
 
 .nes-text.is-warning {
-    color: #f7d51d;
+    color: #f0e078;
 }
 
 .nes-container.is-dark.is-outline {
@@ -471,14 +471,14 @@ p {
 }
 
 #ticket-container strong {
-	color: #e79355;
+	color: #cd80b0;
 	display: block;
 	font-weight: normal !important;
 	padding-bottom: 8px;
 }
 
 #ticket-container h3 {
-	color: #209cee;
+	color: #6f98d9;
 	font-weight: normal !important;
 }
 
