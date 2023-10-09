@@ -105,7 +105,7 @@ a:not([href]):not([tabindex]):hover {
 	
 	menu.nes-container.is-dark.is-outline {
 		margin: 8px 8px 8px auto;
-		width: 600px;
+		width: 640px;
 		height: 58px;
 	}
 	
@@ -122,7 +122,17 @@ a:not([href]):not([tabindex]):hover {
 		width: 880px;
 	}
 	
-	.nes-table.is-dark.is-outline {
+	.gallery_pictures
+	{
+		margin: auto;
+		width: 1446px;
+	}
+	
+	.nes-table.is-dark.is-outline.is-gallery {
+		width: 1446px;
+	}
+	
+	.nes-table.is-dark.is-outline.is-schedule {
 		width: 880px;
 	}
 	
@@ -170,6 +180,15 @@ a:not([href]):not([tabindex]):hover {
 		width: calc(100% - 8px);
 	}
 	
+	.gallery_pictures
+	{
+		margin-left: 8px;
+	}
+	
+	.nes-table.is-dark.is-outline.is-gallery {
+		width: calc(100% - 16px);
+	}
+	
 	#map-pc {
 		display: none;
 	}
@@ -195,7 +214,6 @@ a:not([href]):not([tabindex]):hover {
 	menu.nes-container.is-dark.is-outline {
 		margin: 8px 8px 8px 8px;
 		width: calc(100% - 16px);
-		font-size: 24px;
 	}
 	
 	menu.nes-container.is-dark.is-outline {
@@ -203,7 +221,7 @@ a:not([href]):not([tabindex]):hover {
 		width: calc(100% - 16px);
 	}
 	
-	.nes-table.is-dark.is-outline {
+	.nes-table.is-dark.is-outline.is-schedule {
 		width: calc(100% - 8px);
 	}
 	
@@ -231,6 +249,23 @@ menu .link:not([href]):not([tabindex]):hover {
 
 .center-text {
     text-align: center;
+}
+
+.gallery_pictures
+{
+	font-size: 24px;
+	padding-top: 16px;
+}
+
+.gallery_pictures img
+{
+	display: block;
+	margin: auto;
+	max-width: 100%;
+}
+
+.nes-table.is-dark.is-outline.gallery {
+	width: calc(100% - 8px);
 }
 
 .nes-table-responsive{

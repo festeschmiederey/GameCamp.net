@@ -34,7 +34,7 @@
   </head>
   <script>
     $(document).ready(function () {
-      const sites = ["home", "ticket", "schedule", "faq"];
+      const sites = ["home", "ticket", "schedule", "gallery", "faq"];
 
       sites.forEach(function (site) {
         $("#" + site).click(function (item) {
@@ -79,6 +79,7 @@
         <div id="home" class="nes-text is-warning link">Home</div>
         <div id="ticket" class="nes-text is-warning link">Tickets</div>
         <div id="schedule" class="nes-text is-warning link">Zeitplan</div>
+		<div id="gallery" class="nes-text is-warning link">Gallerie</div>
         <div id="faq" class="nes-text is-warning link">FAQ</div>
       </menu>
     </div>
@@ -347,7 +348,7 @@
         <div class="single_schedule">
           <div class="nes-table-title">Freitag, 27.10.2023</div>
           <div class="nes-table-responsive">
-            <table class="nes-table is-outline is-dark">
+            <table class="nes-table is-outline is-dark is-schedule">
               <tbody>
                 <tr>
                   <td class="blue center-text">18:00 Uhr</td>
@@ -362,7 +363,7 @@
         <div class="single_schedule">
           <div class="nes-table-title">Samstag, 28.10.2023</div>
           <div class="nes-table-responsive">
-            <table class="nes-table is-outline is-dark">
+            <table class="nes-table is-outline is-dark is-schedule">
               <tbody>
                 <tr>
                   <td class="blue center-text">09:00 Uhr</td>
@@ -421,7 +422,7 @@
         <div class="single_schedule">
           <div class="nes-table-title">Sonntag, 29.10.2023</div>
           <div class="nes-table-responsive">
-            <table class="nes-table is-outline is-dark">
+            <table class="nes-table is-outline is-dark is-schedule">
               <tbody>
                 <tr>
                   <td class="blue center-text">09:00 Uhr</td>
@@ -467,6 +468,38 @@
         </div>
       </div>
     </div>
+	
+	<div id="gallery-container" style="display: none">
+		<div>
+			<div class="gallery_pictures">
+				<div class="nes-table-title">Gamecamp 2022</div>
+				<div class="nes-table-responsive">
+					<table class="nes-table is-outline is-dark is-gallery">
+						<tbody>
+							<tr>
+								<td class="blue center-text"><img src="gallery/2022/gc_2022_01_small.jpg"></td>
+								<td class="blue center-text"><img src="gallery/2022/gc_2022_02_small.jpg"></td>
+								<td class="blue center-text"><img src="gallery/2022/gc_2022_03_small.jpg"></td>
+								<td class="blue center-text"><img src="gallery/2022/gc_2022_04_small.jpg"></td>
+							</tr>
+							<tr>
+								<td class="blue center-text"><img src="gallery/2022/gc_2022_05_small.jpg"></td>
+								<td class="blue center-text"><img src="gallery/2022/gc_2022_06_small.jpg"></td>
+								<td class="blue center-text"><img src="gallery/2022/gc_2022_07_small.jpg"></td>
+								<td class="blue center-text"><img src="gallery/2022/gc_2022_08_small.jpg"></td>
+							</tr>
+							<tr>
+								<td class="blue center-text"><img src="gallery/2022/gc_2022_09_small.jpg"></td>
+								<td class="blue center-text"><img src="gallery/2022/gc_2022_10_small.jpg"></td>
+								<td class="blue center-text"><img src="gallery/2022/gc_2022_11_small.jpg"></td>
+								<td class="blue center-text"><img src="gallery/2022/gc_2022_12_small.jpg"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
 
     <div id="faq-container" style="display: none">
       <div class="nes-container is-dark is-outline">
