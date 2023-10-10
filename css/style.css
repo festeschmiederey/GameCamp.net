@@ -374,7 +374,7 @@ menu .link:hover:before {
 .icon {
     height: 64px;
     width: 64px;
-    display: block;
+    display: inline-block;
     background-size: contain;
     image-rendering: pixelated;
     background-repeat: no-repeat;
@@ -409,8 +409,7 @@ footer a:hover {
 }
 
 .is-other {
-    width: 104px;
-    height: 654px;
+
 }
 
 .is-sponsor img {
@@ -418,11 +417,19 @@ footer a:hover {
 }
 
 .is-map {
-    width: 632px;
+    width: 752px;
 }
 
 .is-map iframe{
     filter: invert(95%) hue-rotate(180deg);
+}
+
+.is-map span{
+	padding: 4px 8px 4px 8px
+}
+
+.transport {
+	padding: 14px 0px 6px 0px;
 }
 
 .nes-container.is-dark {
