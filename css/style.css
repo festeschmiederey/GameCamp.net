@@ -61,6 +61,12 @@ red {
     cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0,pointer;
 }
 
+.link-icon {
+	width: 20px;
+    height: 20px;
+	margin-right: 4px;
+}
+
 a {
 	text-decoration: none;
 	color: #f0e078;
@@ -243,7 +249,7 @@ menu .link:not([href]):not([tabindex]) {
 }
 
 menu .link:not([href]):not([tabindex]):hover {
-    color: #f0e078;
+    color: #fff;
     margin-top: 0px;
 }
 
@@ -324,7 +330,7 @@ div.nes-container.is-dark.is-outline {
     padding: 16px;
 }
 
-.nes-container.is-dark.with-title>.title {
+.nes-container.is-dark.with-title.title {
     background-color: #212529;
     margin: -16px 0px;
 }
@@ -359,16 +365,6 @@ menu .link {
     text-align: center;
     flex-grow: 1;
     margin-top: 2px;
-}
-
-menu .link:before {
-    content: ">";
-    color: transparent;
-}
-
-menu .link:hover:before {
-    content: ">";
-    color: #f0e078;
 }
 
 .icon {
@@ -478,7 +474,7 @@ p {
 }
 
 .nes-table.is-dark.is-outline td {
-    padding: 16px;
+    padding: 18px;
 }
 
 .nes-table.is-dark td, .nes-table.is-dark th {
