@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "Press Start 2P";
-    src: url(../font/retro.ttf);
+    font-family: "Pixel";
+    src: url(../font/pixel.ttf);
 	font-display: swap;
 }
 
@@ -16,8 +16,8 @@ body {
 	margin: 0;
     background: rgb(72,79,98);
     background: radial-gradient(at bottom right, rgb(55 114 122) 0%, rgb(40 81 96) 25%, rgb(44 39 56) 100%);
-    font-family: "Press Start 2P";
-	font-size: 16px;
+    font-family: "Pixel";
+	font-size: 18px;
 	line-height: 1.5;
 	height: 100%;
 	background-repeat: no-repeat;
@@ -110,8 +110,8 @@ a:not([href]):not([tabindex]):hover {
 	}
 	
 	logo {
-		font-size: 32px;
-		padding-top: 16px;
+		font-size: 36px;
+		padding-top: 12px;
 		padding-left: 20px;
 		text-shadow: 4px 4px #0004;
 	}
@@ -166,15 +166,15 @@ a:not([href]):not([tabindex]):hover {
 	}
 	
 	logo {
-		font-size: 32px;
-		padding-top: 16px;
+		font-size: 36px;
+		padding-top: 8px;
 		padding-left: 112px;
 		text-shadow: 4px 4px #0004;
-		height: 112px;
+		height: 120px;
 	}
 	
 	.single_schedule {
-		font-size: 24px;
+		font-size: 18px;
 		margin-left: 8px;
 		padding-top: 16px;
 		width: calc(100% - 8px);
@@ -239,12 +239,12 @@ a:not([href]):not([tabindex]):hover {
 
 menu .link:not([href]):not([tabindex]) {
     color: #f0e078;
-    margin-top: 2px;
+    margin-top: 0px;
 }
 
 menu .link:not([href]):not([tabindex]):hover {
     color: #f0e078;
-    margin-top: 2px;
+    margin-top: 0px;
 }
 
 .center-text {
@@ -253,7 +253,7 @@ menu .link:not([href]):not([tabindex]):hover {
 
 .gallery_pictures
 {
-	font-size: 24px;
+	font-size: 18px;
 	padding-top: 16px;
 }
 
@@ -501,8 +501,8 @@ p {
 }
 
 #ticket-container {
-	font-size: 16px;
-	font-family: "Press Start 2P";
+	font-size: 18px;
+	font-family: "Pixel";
 }
 
 #ticket-container strong {
@@ -530,15 +530,15 @@ p {
 #ticket-container input {
 	border-width: 4px;
 	color: #000;
-	font-size: 16px;
-	font-family: "Press Start 2P";
-	height: 49px;
+	font-size: 18px;
+	font-family: "Pixel";
+	height: 52px;
 }
 
 #ticket-container button {
 	border-width: 4px;
-	font-size: 16px;
-	font-family: "Press Start 2P";
+	font-size: 18px;
+	font-family: "Pixel";
 	padding-top: 12px;
 }
 
