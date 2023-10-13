@@ -147,6 +147,15 @@ a:not([href]):not([tabindex]):hover {
 		padding: 16px 0px;
 		width: 320px;
 	}
+	
+	.is-sponsor .line {
+		background-color: #fff2;
+		height: 4px;
+	}
+	
+	.is-sponsor header {
+		padding-bottom: 12px;
+	}
 }
 
 /* For mobile: */
@@ -240,6 +249,10 @@ a:not([href]):not([tabindex]):hover {
 	.is-sponsor yellow {
 		display: block;
 		margin-bottom: 16px;
+	}
+	
+	.is-sponsor .line {
+		display: none;
 	}
 }
 
