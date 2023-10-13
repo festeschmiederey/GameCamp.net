@@ -589,3 +589,19 @@ footer a:hover {
 #faq-container header {
 	padding-bottom: 16px;
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #262A31; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #99A8BF; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fff; 
+}
