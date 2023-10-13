@@ -128,9 +128,18 @@ a:not([href]):not([tabindex]):hover {
 		width: 880px;
 	}
 	
-	.gallery_pictures
-	{
+	.session_image {
 		margin: auto;
+		padding-top: 51px;
+		width: 1446px;
+	}
+	
+	.gallery_pictures {
+		margin: auto;
+		width: 1446px;
+	}
+	
+	.nes-table.is-dark.is-outline.is-session {
 		width: 1446px;
 	}
 	
@@ -195,9 +204,16 @@ a:not([href]):not([tabindex]):hover {
 		width: calc(100% - 8px);
 	}
 	
-	.gallery_pictures
-	{
+	.session_image {
 		margin-left: 8px;
+	}
+	
+	.gallery_pictures {
+		margin-left: 8px;
+	}
+	
+	.nes-table.is-dark.is-outline.is-session {
+		width: calc(100% - 16px);
 	}
 	
 	.nes-table.is-dark.is-outline.is-gallery {
@@ -423,6 +439,10 @@ footer a:hover {
 
 .is-sponsor img {
     margin: 0px 20px;
+}
+
+.is-session img {
+    width: 100%;
 }
 
 .is-map {
