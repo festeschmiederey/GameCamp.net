@@ -154,7 +154,6 @@ a:not([href]):not([tabindex]):hover {
 	.is-sponsor a {
 		display: block;
 		padding: 16px 0px;
-		width: 320px;
 	}
 	
 	.is-sponsor .line {
